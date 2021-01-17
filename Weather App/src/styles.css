@@ -1,0 +1,95 @@
+body {
+  font-family: "Google Sans", arial, sans-serif;
+}
+
+h1 {
+  color: rgb(135, 135, 135);
+  font-size: 24px;
+  font-weight: 100;
+  line-height: 28.8px;
+  text-align: left;
+  margin: 0;
+}
+ul {
+  padding: 0 0 20px;
+  margin: 0;
+}
+li {
+  color: rgb(135, 135, 135);
+  display: block;
+  font-size: 16px;
+  font-weight: 100;
+  height: 19px;
+  line-height: 19.2px;
+  text-align: left;
+  list-style: none;
+}
+
+.border-wrap {
+  border: 1px solid rgb(211, 206, 206);
+  border-radius: 10px;
+  padding: 15px;
+  margin: 20px auto;
+  max-width: 600px;
+  background-image: linear-gradient(
+    to top,
+    rgba(231, 235, 17, 0.6) 50%,
+    #ffffff 60%
+  );
+}
+.temp {
+  color: rgb(33, 33, 33);
+  font-size: 80px;
+  font-weight: 400;
+  line-height: normal;
+}
+.units {
+  position: relative;
+  top: -34px;
+}
+.btn-group {
+  margin-bottom: 20px;
+  color: rgb(199, 190, 190);
+  width: 200px;
+}
+.search-form {
+  margin-bottom: 20px;
+}
+.the-day {
+  font-size: 14px;
+  margin: -8px;
+  text-align: center;
+}
+.day-temp {
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+  color: rgb(182, 175, 175);
+}
+.card:hover {
+  color: rgb(95, 177, 231);
+
+  background-color: grey;
+}
+
+#icon-style {
+  font-size: 40px;
+  margin-left: 10px;
+}
+.fa-circle {
+  color: rgb(247, 247, 77);
+}
+#cloud-sun {
+  margin: -10px 0px -10px 0px;
+}
+
+.fa-cloud {
+  color: rgb(204, 209, 218);
+}
+
+.fa-cloud-sun-rain {
+  color: rgb(204, 209, 218);
+}
+.card {
+  margin-top: 40px;
+}
