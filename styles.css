@@ -92,6 +92,7 @@ li {
 }
 .card {
   margin-top: 40px;
+  bottom: 20px;
 }
 #next-week {
   margin-left: 200px;
