@@ -94,5 +94,18 @@ li {
   margin-top: 40px;
 }
 #next-week {
-  margin-top: 20px 0px;
+  margin-left: 200px;
+}
+.my-git {
+  margin-top: -20px;
+  margin-left: 150px;
+}
+
+#my-name {
+  color: #000000;
+}
+.my-git,
+#my-name {
+  font-size: 15px;
+  font-weight: lighter;
 }
