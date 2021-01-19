@@ -1,5 +1,5 @@
 // #1
-//display the current date and time using JavaScript: Tuesday 16: 00
+//display the current date and time
 
 //DATE
 console.log("Today");
@@ -31,7 +31,7 @@ today.innerHTML = `${day} ${hours}:${minutes}`;
 
 // #2
 //Add a search engine,
-//when searching for a city(i.e.Paris), display the city name on the page after the user submits the form.
+// Display the city name on the page after the user submits the form.
 //CITY
 
 //3
@@ -84,6 +84,7 @@ function displayWeather(response) {
   let tempDegrees = document.querySelector("#the-temp");
   let description = response.data.weather[0].description;
   let dayDescription = document.querySelector("#day-Description");
+
   tempDegrees.innerHTML = `${dayTemp}`;
   dayDescription.innerHTML = `${description}`;
 }
