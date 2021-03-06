@@ -62,17 +62,21 @@ Celsius.addEventListener("click", getCelsius);
 
 function searchCity(event) {
   event.preventDefault();
-  let search = document.querySelector("#searching");
-  let city = document.querySelector("#the-city");
+  let cityInput = document.querySelector("#searching");
+  cityName(cityInput.value);
+  console.log(cityInput.value);
+  //let search = document.querySelector("#searching");
+  //let city = document.querySelector("#the-city");
 
-  if (search.value) {
-    city.innerHTML = `${search.value}`;
-    cityName(search.value);
-  }
+  //if (search.value) {
+  //  city.innerHTML = `${search.value}`;
+  // cityName(search.value);
+  //}
 }
-
+cityName("London");
 let searchInput = document.querySelector(".search-form");
 searchInput.addEventListener("click", searchCity);
+
 // Display Weather
 function displayWeather(response) {
   console.log(response.data);
@@ -89,6 +93,7 @@ function displayWeather(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+  sunCloud.setAttribute("alt", response.data.weather[0].description);
   tempDegrees.innerHTML = `${dayTemp}`;
   dayDescription.innerHTML = `${description}`;
 }
