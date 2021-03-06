@@ -110,3 +110,11 @@ li {
   font-size: 15px;
   font-weight: lighter;
 }
+
+.units .active {
+  color: #e0a800;
+  cursor: default;
+}
+.units .active:hover {
+  text-decoration: overline black;
+}

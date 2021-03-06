@@ -44,6 +44,12 @@ function getFahren(event) {
   let fahrenTemp = (celsiusTemp * 9) / 5 + 32;
   let tempElement = document.querySelector("#the-temp");
   tempElement.innerHTML = Math.round(fahrenTemp);
+
+  // Remove active class from celsisus
+
+  Fahrenheit.classList.add("active");
+  Celsius.classList.remove("active");
+  //
 }
 let Fahrenheit = document.querySelector("#fahren-deg");
 Fahrenheit.addEventListener("click", getFahren);
@@ -52,12 +58,15 @@ let celsiusTemp = null;
 //Celsius Temperature
 function getCelsius(event) {
   event.preventDefault();
-
   tempElement = document.querySelector("#the-temp");
-
   tempElement.innerHTML = Math.round(celsiusTemp);
-}
 
+  // Remove active class from F
+
+  Celsius.classList.add("active");
+  Fahrenheit.classList.remove("active");
+  //
+}
 let Celsius = document.querySelector("#celsius-deg");
 Celsius.addEventListener("click", getCelsius);
 
