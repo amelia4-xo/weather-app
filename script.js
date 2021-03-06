@@ -84,7 +84,11 @@ function displayWeather(response) {
   let tempDegrees = document.querySelector("#the-temp");
   let description = response.data.weather[0].description;
   let dayDescription = document.querySelector("#day-Description");
-
+  let sunCloud = document.querySelector("#sun-cloud-icon");
+  sunCloud.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
   tempDegrees.innerHTML = `${dayTemp}`;
   dayDescription.innerHTML = `${description}`;
 }
