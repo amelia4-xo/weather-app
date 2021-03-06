@@ -41,20 +41,23 @@ today.innerHTML = `${day} ${hours}:${minutes}`;
 
 function getFahren(event) {
   event.preventDefault();
-  let temperature = document.querySelector("#the-temp");
-
-  temperature.innerHTML = 54;
+  let fahrenTemp = (celsiusTemp * 9) / 5 + 32;
+  let tempElement = document.querySelector("#the-temp");
+  tempElement.innerHTML = Math.round(fahrenTemp);
 }
 let Fahrenheit = document.querySelector("#fahren-deg");
 Fahrenheit.addEventListener("click", getFahren);
+let celsiusTemp = null;
 
+//Celsius Temperature
 function getCelsius(event) {
   event.preventDefault();
 
-  temperature = document.querySelector("#the-temp");
+  tempElement = document.querySelector("#the-temp");
 
-  temperature.innerHTML = `12`;
+  tempElement.innerHTML = Math.round(celsiusTemp);
 }
+
 let Celsius = document.querySelector("#celsius-deg");
 Celsius.addEventListener("click", getCelsius);
 
@@ -83,21 +86,26 @@ function displayWeather(response) {
 
   let theCity = document.querySelector("#the-city");
   let dayCity = response.data.name;
-  theCity.innerHTML = `${dayCity}`;
+
   let dayTemp = Math.round(response.data.main.temp);
   let tempDegrees = document.querySelector("#the-temp");
   let description = response.data.weather[0].description;
   let dayDescription = document.querySelector("#day-Description");
   let sunCloud = document.querySelector("#sun-cloud-icon");
-  sunCloud.setAttribute(
-    "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-  );
-  sunCloud.setAttribute("alt", response.data.weather[0].description);
+  //edit
+  celsiusTemp = response.data.main.temp;
+  //
+
+  theCity.innerHTML = `${dayCity}`;
   tempDegrees.innerHTML = `${dayTemp}`;
   dayDescription.innerHTML = `${description}`;
+  sunCloud.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  sunCloud.setAttribute("alt", response.data.weather[0].description);
 }
-
+//AJAX
 function cityName(city) {
   let apiKey = "07a6557f6ce1a74d4e6b6d0c863ab142";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
