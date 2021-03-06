@@ -118,3 +118,16 @@ li {
 .units .active:hover {
   text-decoration: overline black;
 }
+#sun-cloud-icon {
+  background-color: rgba(247, 198, 6, 0.65);
+  position: relative;
+  width: 30%;
+  border: 1px transparent;
+  border-radius: 40px;
+  margin-left: 15px;
+}
+/*background-color: rgba(128, 128, 128, 0.3);*/
+
+#sun-cloud-icon:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
