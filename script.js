@@ -100,7 +100,7 @@ function searchCity(event) {
   // cityName(search.value);
   //}
 }
-cityName("London");
+
 let searchInput = document.querySelector(".search-form");
 searchInput.addEventListener("click", searchCity);
 
@@ -120,7 +120,11 @@ function displayWeather(response) {
   //temp - global so it can be put within a function
   celsiusTemp = response.data.main.temp;
   //
-
+  let windElement = document.querySelector("#windy");
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+  let humidityElement = document.querySelector("#humidity");
+  humidityElement.innerHTML = Math.round(response.data.main.humidity);
+  //
   theCity.innerHTML = `${dayCity}`;
   tempDegrees.innerHTML = `${dayTemp}`;
   dayDescription.innerHTML = `${description}`;
@@ -130,6 +134,8 @@ function displayWeather(response) {
   );
   sunCloud.setAttribute("alt", response.data.weather[0].description);
 }
+//
+
 //AJAX
 function cityName(city) {
   let apiKey = "07a6557f6ce1a74d4e6b6d0c863ab142";
@@ -168,6 +174,7 @@ function displayForecast(response) {
     )}°</small></div>
               </div>`;
   }
+
   console.log(forecast);
 }
 //Current
@@ -177,6 +184,8 @@ function currentLocation(position) {
   let apiKey = "07a6557f6ce1a74d4e6b6d0c863ab142";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeather);
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
 
   //current forecast - attempt
   //apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=${
@@ -189,8 +198,12 @@ function currentLocation(position) {
 //
 function getPosition(event) {
   event.preventDefault();
+
   navigator.geolocation.getCurrentPosition(currentLocation);
 }
 
 let currentTemperature = document.querySelector("#current-weather");
 currentTemperature.addEventListener("click", getPosition);
+
+//Default city
+cityName("London");

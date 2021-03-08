@@ -52,8 +52,11 @@
         </form>
         <h1 id="the-city"></h1>
         <ul>
-          <li>Last Updated: <span id="date-time">Thursday 16:00</span></li>
-          <li id="day-Description"><em>Mostly Sunny</em></li>
+          <li>
+            <small><em>Last Updated:</em> </small>
+            <span id="date-time">Thursday 16:00</span>
+          </li>
+          <li><em id="day-Description">Mostly Sunny</em></li>
         </ul>
         <div class="row">
           <div class="col-6">
@@ -70,15 +73,24 @@
           </div>
           <div class="col-6">
             <div class="btn-group" role="group" aria-label="Basic example">
-              <button type="button" class="btn btn-outline-warning" id="rainy">
-                <i class="fas fa-tint"></i>
+              <button type="button" class="btn btn-outline-warning">
+                <span>
+                  <i class="fas fa-wind"></i> <strong>: </strong>
+                  <span id="windy"></span> <small>mph</small>
+                </span>
               </button>
               <button type="button" class="btn btn-outline-warning">
-                <i class="fas fa-temperature-high"></i>
+                <span
+                  ><i class="fas fa-temperature-high"></i><strong>: </strong
+                  ><span id="humidity"></span>%</span
+                >
               </button>
-              <button type="button" class="btn btn-outline-warning">
-                <i class="fas fa-wind" id="windy"></i>
-              </button>
+              <!--<button type="button" class="btn btn-outline-warning">
+                <span
+                  ><i class="fas fa-tint"></i> <strong>: </strong
+                  ><span id="rainy"></span>%</span
+                >
+              </button>-->
             </div>
           </div>
         </div>
@@ -163,5 +175,10 @@
       </div>
     </div>
     <script src="script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
