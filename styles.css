@@ -1,5 +1,5 @@
 body {
-  font-family: "Google Sans", arial, sans-serif;
+  font-family: arial, sans-serif;
 }
 
 h1 {
@@ -119,7 +119,7 @@ li {
   text-decoration: overline black;
 }
 #sun-cloud-icon {
-  background-color: rgba(247, 198, 6, 0.65);
+  background-color: rgba(247, 247, 77, 0.9);
   position: relative;
   width: 30%;
   border: 1px transparent;
@@ -131,3 +131,9 @@ li {
 #sun-cloud-icon:hover {
   background-color: rgba(0, 0, 0, 0.4);
 }
+/*@media (max-width: 768px) {
+  body {
+    background: rgba(0, 0, 0, 0.4);
+  }
+}
+*/
