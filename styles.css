@@ -28,7 +28,7 @@ li {
 .border-wrap {
   border: 1px solid rgb(211, 206, 206);
   border-radius: 10px;
-  padding: 15px;
+  padding: 30px;
   margin: 20px auto;
   max-width: 600px;
   /*background-image: linear-gradient(
@@ -72,11 +72,15 @@ li {
   margin-top: 40px;
   bottom: 20px;
   border-radius: 10px;
-  border-bottom-left-radius: 55px;
-  /*color: rgb(95, 177, 231);*/
+   /*border-bottom-left-radius: 55px;
+ color: rgb(95, 177, 231);*/
 
   background-color: rgba(255, 255, 255, 0.322);
   /*background-color: grey;*/
+}
+
+#forecast img {
+  width: 100%;
 }
 
 /*
