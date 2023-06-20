@@ -67,9 +67,7 @@ li {
   font-weight: bold;
   color: rgb(182, 175, 175);
 }
-.day-temp:hover {
-  color: rgba(231, 235, 17, 0.6);
-}
+
 .card {
   margin-top: 40px;
   bottom: 20px;
@@ -81,10 +79,6 @@ li {
   /*background-color: grey;*/
 }
 
-.card:hover {
-  color: rgb(95, 177, 231);
-  background-color: grey;
-}
 /*
 #icon-style {
   font-size: 40px;
@@ -140,9 +134,10 @@ li {
 }
 /*background-color: rgba(128, 128, 128, 0.3);*/
 
-#sun-cloud-icon:hover {
+/*#sun-cloud-icon:hover {
   background-color: rgba(0, 0, 0, 0.4);
-}
+}*/
+
 /*@media (max-width: 768px) {
   body {
     background: rgba(0, 0, 0, 0.4);
