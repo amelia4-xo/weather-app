@@ -1,7 +1,7 @@
 body {
   font-family: arial, sans-serif;
 }
-
+`
 h1 {
   color: rgb(33, 33, 33);
   font-size: 24px;
@@ -31,11 +31,11 @@ li {
   padding: 15px;
   margin: 20px auto;
   max-width: 600px;
-  background-image: linear-gradient(
+  /*background-image: linear-gradient(
     to top,
     rgba(231, 235, 17, 0.6) 50%,
     #ffffff 60%
-  );
+  );*/
 }
 .temp {
   color: rgb(33, 33, 33);
@@ -131,10 +131,10 @@ li {
   text-decoration: overline black;
 }
 #sun-cloud-icon {
-  background-color: rgba(247, 247, 77, 0.9);
+  /*: rgba(247, 247, 77, 0.9);*/
   position: relative;
   width: 30%;
-  border: 1px transparent;
+  border: 1px dashed #ffc107;
   border-radius: 40px;
   margin-left: 15px;
 }
