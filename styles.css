@@ -79,6 +79,10 @@ li {
   /*background-color: grey;*/
 }
 
+.card-body {
+  color:#ffc1078a;
+}
+
 #forecast img {
   width: 100%;
 }
@@ -133,6 +137,7 @@ li {
   position: relative;
   width: 30%;
   border: 1px dashed #ffc107;
+  background: #f1f16e;
   border-radius: 40px;
   margin-left: 15px;
 }
